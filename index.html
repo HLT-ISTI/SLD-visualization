@@ -73,6 +73,7 @@
 
 <script>
     $(document).ready(function() {
+        const base_url_plots = "https://hlt-isti.github.io/SLD-visualization/plots";
         var prior_iframe = $("#prior-iframe");
         var nae_iframe = $("#nae-iframe");
         var posteriors_iframe = $("#posteriors-iframe");
@@ -82,13 +83,13 @@
         $("#plot-form").submit(function(event) {
             console.log("halo");
             event.preventDefault();
-            prior_iframe.attr("src", "file:///home/alessio/Sviluppo/Python/SLD-visualization/plots/" + clf_select.val() + "/" + target_select.val() + "/" + "0_priors_" + codeframe_select.val() + ".html");
+            prior_iframe.attr("src", base_url_plots + clf_select.val() + "/" + target_select.val() + "/" + "0_priors_" + codeframe_select.val() + ".html");
             prior_iframe.toggle();
 
-            nae_iframe.attr("src", "file:///home/alessio/Sviluppo/Python/SLD-visualization/plots/" + clf_select.val() + "/" + target_select.val() + "/" + "0_nae_" + codeframe_select.val() + ".html");
+            nae_iframe.attr("src", base_url_plots + clf_select.val() + "/" + target_select.val() + "/" + "0_nae_" + codeframe_select.val() + ".html");
             nae_iframe.toggle();
 
-            posteriors_iframe.attr("src", "file:///home/alessio/Sviluppo/Python/SLD-visualization/plots/" + clf_select.val() + "/" + target_select.val() + "/" + "0_posteriors_" + codeframe_select.val() + ".html");
+            posteriors_iframe.attr("src", base_url_plots + clf_select.val() + "/" + target_select.val() + "/" + "0_posteriors_" + codeframe_select.val() + ".html");
             posteriors_iframe.toggle();
         });
     });
