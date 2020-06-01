@@ -25,13 +25,23 @@
                 <div class="form-group">
                     <label for="clf-select">Select a classifier</label>
                     <select id="clf-select" name="clf-select" class="custom-select">
-                        <option>Random-Forest</option>
+                        <option value='Calibrated-Linear-SVM'>Calibrated Linear SVM</option>
+                        <option value='Calibrated-Logistic-Regression'>Calibrated Logistic Regression</option>
+                        <option value='Calibrated-Multinomial-Bayes'>Calibrated Multinomial Bayes</option>
+                        <option value='Calibrated-Random-Forest'>Calibrated Random Forest</option>
+                        <option value='Logistic-Regression'>Logistic Regression</option>
+                        <option value='Multinomial-Bayes'>Multinomial Bayes</option>
+                        <option value='Random-Forest'>Random Forest</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="target_select">Select a number of target classes</label>
                     <select id="target-select" name="target-select" class="custom-select">
                         <option>2</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option>20</option>
+                        <option>37</option>
                     </select>
                 </div>
                 <div class="form-group">
