@@ -91,17 +91,21 @@
         var target_select = $("#target-select");
         var codeframe_select = $("#codeframe-select");
         $("#plot-form").submit(function(event) {
-            console.log("halo");
             event.preventDefault();
             prior_iframe.attr("src", base_url_plots + clf_select.val() + "/" + target_select.val() + "/" + "0_priors_" + codeframe_select.val() + ".html");
-            prior_iframe.toggle();
+            show_if_hidden(prior_iframe);
 
             nae_iframe.attr("src", base_url_plots + clf_select.val() + "/" + target_select.val() + "/" + "0_nae_" + codeframe_select.val() + ".html");
-            nae_iframe.toggle();
+            show_if_hidden(nae_iframe);
 
             posteriors_iframe.attr("src", base_url_plots + clf_select.val() + "/" + target_select.val() + "/" + "0_posteriors_" + codeframe_select.val() + ".html");
-            posteriors_iframe.toggle();
+            show_if_hidden(posteriors_iframe);
         });
+
+        function show_if_hidden(elem) {
+            if (elem.is(':hidden'))
+                elem.toggle();
+        }
     });
 </script>
 </body>
